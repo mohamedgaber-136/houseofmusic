@@ -2,8 +2,8 @@
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import "./navbar.css";
-import Aos from "aos";
 import "aos/dist/aos.css";
+import Aos from "aos";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Bebas_Neue } from "next/font/google";
