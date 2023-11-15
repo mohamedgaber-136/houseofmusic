@@ -1,3 +1,7 @@
+import Navigation from "./Components/Navigation/Navigation";
+// import "@fortawesome/fontawesome-svg-core/styles.css";
+// import { config } from "@fortawesome/fontawesome-svg-core";
+// config.autoAddCss = false;
 import Image from "next/image";
 import styles from "./page.module.css";
 // import artistImg from "../app/Images/Artist_Image.png";
@@ -40,23 +44,26 @@ export default function Home() {
   return (
     <>
       {/* ----------------------------- Header ----------------------------- */}
-      <header className="bg-dark text-light d-flex justify-content-center align-items-center">
-        {/* <Image
+      {/* <header className="bg-dark text-light d-flex justify-content-center align-items-center"> */}
+      {/* <Image
           src="/next.svg"
           alt="Next.js Logo"
           width={100}
           height={30}
           // priority
         /> */}
+
+      {/* </header> */}
+
+      {/* ----------------------------- Main ----------------------------- */}
+      <main className=" bg-dark min-vh-100 d-flex flex-column  align-items-center">
+        {/* <Navigation /> */}
         <h2
-          className={` d-flex justify-content-center align-items-center text-center ${styles.heading}`}
+          className={` d-flex justify-content-center align-items-center text-center text-light ${styles.heading}`}
         >
           Popular
         </h2>
-      </header>
 
-      {/* ----------------------------- Main ----------------------------- */}
-      <main className=" bg-dark min-vh-100 d-flex justify-content-center align-items-center">
         <div className=" d-flex flex-column gap-5 p-3">
           {list.map((item, index) => (
             <ArtistCard
