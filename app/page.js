@@ -58,6 +58,7 @@ export default function Home() {
       {/* ----------------------------- Main ----------------------------- */}
       <main className=" bg-dark min-vh-100 d-flex flex-column  align-items-center">
         {/* <Navigation /> */}
+        {/* <Navigation /> */}
         <h2
           className={` d-flex justify-content-center align-items-center text-center text-light ${styles.heading}`}
         >
