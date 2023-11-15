@@ -67,7 +67,7 @@ function Navigation() {
             data-aos-easing="ease-in-sine"
             data-aos-duration="600"
           >
-            <Link className={`navbar-brand  p-0 m-0 popularBrand `} href="#">
+            <Link className={`navbar-brand  p-0 m-0 popularBrand text-white `} href="#">
               POPULAR
             </Link>
             <Link className="navbar-brand  p-0 m-0 textShadow " href="#">

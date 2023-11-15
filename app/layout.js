@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import Navigation from "./Components/Navigation/Navigation";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 import { Bebas_Neue } from "next/font/google";
 const bebas = Bebas_Neue({
@@ -14,7 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={bebas.className}>{children}</body>
+      <body className={bebas.className}>
+        <>
+          <Navigation />
+          {children}
+        </>
+      </body>
     </html>
   );
 }

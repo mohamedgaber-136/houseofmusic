@@ -1,0 +1,32 @@
+.mainbg {
+    background-image: url('../../public/images/image_0.png');
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 80%;
+    position: relative;
+}
+
+.bgtext {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+@media(max-width:767px) {
+
+    .mainbg {
+        width: 90%;
+    }
+ 
+
+}
+.teamDataParent{
+    width: 60%;
+    height: 300px ;
+}
+.h6Text{
+    font-size: 12px;
+    color: grey !important; margin: 0 !important;
+}

@@ -1,6 +1,4 @@
-import Navigation from "./Components/Navigation/Navigation";
 import styles from "./page.module.css";
-// import artistImg from "../app/Images/Artist_Image.png";
 import ArtistCard from "./Components/ArtistCard/ArtistCard";
 import image_0 from "../public/images/image_0.png";
 import image_1 from "../public/images/image_1.png";
@@ -18,10 +16,9 @@ export default function Home() {
   return (
     <>
       {/* ----------------------------- Main ----------------------------- */}
-      <Navigation />
-      <main className={` bg-dark  d-flex flex-column  align-items-center ${styles.mainData}`}>
+      <main className={`  d-flex flex-column  align-items-center ${styles.mainData}`}>
         <h2
-          className={` d-flex justify-content-center align-items-center text-center text-light ${styles.heading}`}
+          className={` d-flex display-4 justify-content-center align-items-center text-center text-light ${styles.heading}`}
         >
           Popular
         </h2>
