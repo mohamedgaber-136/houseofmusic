@@ -7,21 +7,21 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Bebas_Neue } from "next/font/google";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import the icons you need
-// import {
-//   faSearch,
-//   faAmbulance,
-//   faAnchor,
-// } from "@fortawesome/free-solid-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose, faBars } from "@fortawesome/free-solid-svg-icons";
 const bebas = Bebas_Neue({
   subsets: ["latin"],
   weight: ["400"],
 });
+config.autoAddCss = false;
 function Navigation() {
+  let timing;
+  let animation;
   let date = new Date();
   let year = date.getFullYear();
-  let [closeWindo, setCloseWindow] = useState(true);
+  let [closeWindo, setCloseWindow] = useState(false);
   const CloseWindowFunc = () => {
     setCloseWindow(false);
     if (!closeWindo) {
@@ -29,23 +29,36 @@ function Navigation() {
     }
   };
   useEffect(() => {
-    Aos.init();
+    timing = setTimeout(() => {
+      setCloseWindow(true);
+    }, 100);
+    return () => clearTimeout(timing);
+  }, []);
+  useEffect(() => {
+    animation = setTimeout(() => {
+      Aos.init();
+    }, 1000);
+    return () => clearTimeout(animation);
   }, []);
   return (
-    <div className={bebas.className}>
-      {/* <FontAwesomeIcon
-        icon={faSearch}
-        style={{ fontSize: 100, color: "blue" }}
-      /> */}
-      <Navbar className={!closeWindo ? "widthZero" : "widthFull"}>
-        <i
-          className={
-            !closeWindo
-              ? "fa-solid fa-bars-staggered text-dark"
-              : "fa-solid fa-xmark text-white"
-          }
-          onClick={CloseWindowFunc}
-        ></i>
+    <div
+      className={!closeWindo ? "widthZero navParent" : "widthFull navParent"}
+    >
+      <Navbar className={bebas.className}>
+        {!closeWindo ? (
+          <FontAwesomeIcon
+            icon={faBars}
+            style={{ fontSize: 30, color: "white" }}
+            onClick={CloseWindowFunc}
+          />
+        ) : (
+          <FontAwesomeIcon
+            icon={faClose}
+            onClick={CloseWindowFunc}
+            style={{ fontSize: 30, color: "white" }}
+          />
+        )}
+
         <Container className="align-items-center d-flex justify-content-center ">
           <div
             className="d-flex flex-column justify-content-start textParent  gap-1 "

@@ -1,38 +1,12 @@
 import Navigation from "./Components/Navigation/Navigation";
-// import "@fortawesome/fontawesome-svg-core/styles.css";
-// import { config } from "@fortawesome/fontawesome-svg-core";
-// config.autoAddCss = false;
-import Image from "next/image";
 import styles from "./page.module.css";
 // import artistImg from "../app/Images/Artist_Image.png";
 import ArtistCard from "./Components/ArtistCard/ArtistCard";
-
 import image_0 from "../public/images/image_0.png";
 import image_1 from "../public/images/image_1.png";
 import image_2 from "../public/images/image_2.png";
 import image_3 from "../public/images/image_3.png";
 import image_4 from "../public/images/image_4.png";
-
-// import Font Awesome CSS
-import "@fortawesome/fontawesome-svg-core/styles.css";
-
-import { config } from "@fortawesome/fontawesome-svg-core";
-// Tell Font Awesome to skip adding the CSS automatically
-// since it's already imported above
-config.autoAddCss = false;
-
-// pages/index.js
-
-// Import the FontAwesomeIcon component
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-// import the icons you need
-import {
-  faSearch,
-  faAmbulance,
-  faAnchor,
-} from "@fortawesome/free-solid-svg-icons";
-
 export default function Home() {
   const list = [
     { image: image_0, name: "Evolve" },
@@ -43,21 +17,9 @@ export default function Home() {
   ];
   return (
     <>
-      {/* ----------------------------- Header ----------------------------- */}
-      {/* <header className="bg-dark text-light d-flex justify-content-center align-items-center"> */}
-      {/* <Image
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={100}
-          height={30}
-          // priority
-        /> */}
-
-      {/* </header> */}
-
       {/* ----------------------------- Main ----------------------------- */}
-        {/* <Navigation /> */}
-      <main className=" bg-dark min-vh-100 d-flex flex-column  align-items-center">
+      <Navigation />
+      <main className={` bg-dark  d-flex flex-column  align-items-center ${styles.mainData}`}>
         <h2
           className={` d-flex justify-content-center align-items-center text-center text-light ${styles.heading}`}
         >
@@ -74,12 +36,6 @@ export default function Home() {
           ))}
         </div>
       </main>
-      <div>
-        <FontAwesomeIcon
-          icon={faSearch}
-          style={{ fontSize: 100, color: "blue" }}
-        />
-      </div>
     </>
   );
 }

@@ -10,4 +10,10 @@
 .heading {
   height: 80px;
 }
+.mainData{
+  position: absolute;
+  
+  top: 0;
+  width: 100%;
+}
 

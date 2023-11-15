@@ -1,11 +1,15 @@
 .navbar {
-    background-color: black;
     height: 100vh;
+}
+
+.navParent {
+    background-color: black;
     position: relative;
     transition: 0.9s;
     left: 0;
     right: 0;
     z-index: 200;
+
 }
 
 .widthZero {
@@ -16,11 +20,14 @@
     position: absolute;
     bottom: 50px;
 }
+
 .widthFull {
     width: 100%;
+
 }
+
 .fa-xmark,
-.fa-bars-staggered {
+.fa-bars{
     position: fixed;
     right: 50px;
     top: 50px;
@@ -46,9 +53,11 @@
     background-clip: text;
     color: transparent !important;
 }
+
 .popularBrand {
     color: white;
 }
+
 .fa-brands {
     color: white !important;
     cursor: pointer;
