@@ -1,0 +1,10 @@
+.audioParent{
+    width: 80%;
+    border: 5px solid grey;
+    height: 300px;
+    overflow-y: hidden;
+}
+._oGACf{
+    height: 200px !important;
+    border: 5px solid red;
+}

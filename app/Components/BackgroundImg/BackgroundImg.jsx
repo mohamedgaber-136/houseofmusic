@@ -1,6 +1,6 @@
 import React from 'react'
 
- const BackgroundImg = ({styles,mainStyles}) => {
+ const BackgroundImg = ({mainStyles}) => {
   return (
     
     <div className="container p-lg-5 py-3 d-flex justify-content-center">

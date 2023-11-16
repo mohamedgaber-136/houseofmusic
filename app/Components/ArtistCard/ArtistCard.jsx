@@ -1,8 +1,5 @@
 import React from "react";
 import styles from "./ArtistCard.module.css";
-import background from "../../../public/Images/image_1.png";
-import Image from "next/image";
-
 export default function ArtistCard({ imageSrc, name }) {
   return (
     <div className="position-relative">
@@ -12,7 +9,7 @@ export default function ArtistCard({ imageSrc, name }) {
         <div
           className={styles.artistImage}
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(212, 212, 212, 0.1),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 1)),url(${imageSrc.src})`,
+            background: `linear-gradient(to right, rgba(212, 212, 212, 0.1),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 1)),url(${imageSrc.src})`,
           }}
         />
       </div>
