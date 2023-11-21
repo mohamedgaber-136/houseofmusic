@@ -12,7 +12,6 @@ const main = () => {
       <TeamData mainStyles={mainStyles} />
       <ImagesCarousel />
       <AudioPlayer />
-      <AudioPlayer />
     </div>
   );
 };

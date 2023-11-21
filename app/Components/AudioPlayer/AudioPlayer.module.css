@@ -1,10 +1,29 @@
-.audioParent{
+.audioParent {
     width: 80%;
-    border: 5px solid grey;
-    height: 300px;
     overflow-y: hidden;
+    border: 5px solid green;
 }
-._oGACf{
-    height: 200px !important;
-    border: 5px solid red;
+
+.audioParent img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.PlayerSection {
+    width: 400px;
+    overflow: hidden;
+    height: 50px;
+}
+.PlayerSection img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    padding: 2px;
+}
+.playBtn{
+    cursor: pointer;
 }

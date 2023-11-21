@@ -1,25 +1,17 @@
 "use client";
 import styles from "./AudioPlayer.module.css";
-import React, { useState, useEffect, useRef } from "react";
+import img from "../../../public/images/image_2.png";
+import { PLayer } from "./PLayer";
 const AudioPlayer = () => {
-  let audioRef = useRef();
-  const playMusic = () => {
-    audioRef.current.play();
-  };
-  const pauseMusic = () => {
-    audioRef.current.pause();
-  };
+ 
   return (
     <div className="d-flex align-items-center justify-content-center mt-4">
-      <div className={`${styles.audioParent}`}>
-        <audio
-          ref={audioRef}
-          src="/leva-eternity-149473.mp3"
-          type="audio/mpeg"
-        />
+      <div className={`${styles.audioParent} d-flex align-items-center`}>
+      <PLayer
+          imgSrc={img.src}
+          audioSrc={"/leva-eternity-149473.mp3"}
+          />
       </div>
-      <button onClick={playMusic}>click</button>
-      <button onClick={pauseMusic}>pause</button>
     </div>
   );
 };
